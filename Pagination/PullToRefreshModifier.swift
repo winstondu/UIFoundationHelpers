@@ -19,6 +19,7 @@ import SwiftUI
 ///
 /// - Note: This modifier creates its own `ScrollView`. Pass the scroll *content*,
 ///   not a `ScrollView` itself.
+@available(iOS 18, *)
 struct PullToRefreshModifier<Indicator: RefreshIndicator>: ViewModifier {
     let threshold: CGFloat
     let onRefresh: @MainActor () async -> Void
@@ -109,6 +110,7 @@ extension View {
     ///   - indicator: The type of `RefreshIndicator` to display. Defaults to `DefaultRefreshIndicator`.
     ///   - threshold: Pull distance (in points) required to trigger a refresh. Defaults to 80.
     ///   - action: An async closure called when the user triggers a refresh.
+    @available(iOS 18, *)
     public func pullToRefresh<I: RefreshIndicator>(
         indicator: I.Type = DefaultRefreshIndicator.self,
         threshold: CGFloat = 80,

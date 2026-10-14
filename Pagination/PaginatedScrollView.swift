@@ -27,6 +27,7 @@ import SwiftUI
 /// - Empty state
 /// - Full-screen error with retry (on initial load failure)
 /// - Inline error with retry (on load-more failure)
+@available(iOS 18, *)
 public struct PaginatedScrollView<
     Source: PaginatedDataSource,
     ItemContent: View,
@@ -205,6 +206,7 @@ public struct PaginatedScrollView<
 
 // MARK: - Convenience init without custom empty view
 
+@available(iOS 18, *)
 extension PaginatedScrollView where Empty == PaginatedEmptyView {
 
     /// Creates a paginated scroll view with a **list** layout and default empty state.

@@ -19,6 +19,7 @@ import SwiftUI
 /// }
 /// .loadMore { viewModel.loadMore() }
 /// ```
+@available(iOS 18, *)
 struct LoadMoreModifier: ViewModifier {
     let distanceThreshold: CGFloat
     let isEnabled: Bool
@@ -65,6 +66,7 @@ extension View {
     ///   - distanceFromBottom: Distance from the bottom (in points) at which to trigger. Defaults to 300.
     ///   - isEnabled: Whether load-more detection is active. Defaults to `true`.
     ///   - action: A closure called when the scroll position enters the threshold zone.
+    @available(iOS 18, *)
     public func loadMore(
         distanceFromBottom: CGFloat = 300,
         isEnabled: Bool = true,

@@ -1,11 +1,11 @@
-// swift-tools-version: 6.3
+// swift-tools-version: 6.2
 
 import PackageDescription
 
 let package = Package(
     name: "WinstonUIFoundation",
     platforms: [
-        .iOS(.v26),
+        .iOS(.v17),
     ],
     products: [
         .library(

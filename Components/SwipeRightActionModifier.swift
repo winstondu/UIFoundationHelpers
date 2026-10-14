@@ -1,5 +1,6 @@
 import SwiftUI
 
+@available(iOS 18, *)
 private struct SwipeRightActionModifier<Label: View>: ViewModifier {
     let onReply: () -> Void
     @ViewBuilder let label: Label
@@ -60,6 +61,7 @@ private struct SwipeRightActionModifier<Label: View>: ViewModifier {
     }
 }
 
+@available(iOS 18, *)
 private struct SwipeGesture: UIGestureRecognizerRepresentable {
     let onChanged: (UIPanGestureRecognizer) -> Void
     let onEnded: (UIPanGestureRecognizer) -> Void
@@ -104,6 +106,7 @@ private struct SwipeGesture: UIGestureRecognizerRepresentable {
 }
 
 extension View {
+    @available(iOS 18, *)
     public func swipeRightAction(
         enabled: Bool = true,
         @ViewBuilder label: @escaping () -> some View = {
